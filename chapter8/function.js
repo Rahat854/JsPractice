@@ -22,6 +22,11 @@ function sub(){
 // functionName()
 // add()
 // sub()
-for(let i = 0; i < 5; i++){
-    add()
-} 
+// for(let i = 0; i < 5; i++){
+//     add()
+// } 
+add()
+add()
+add()
+add()
+add()
