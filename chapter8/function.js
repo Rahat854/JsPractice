@@ -6,7 +6,7 @@
 // date.getFullYear() 
 
 function functionName() {
-    
+    console.log('I am a function')
 } 
 
 function add(){
@@ -19,3 +19,9 @@ function sub(){
     let b = 20
     console.log(a-b)
 }
+// functionName()
+// add()
+// sub()
+for(let i = 0; i < 5; i++){
+    add()
+} 
