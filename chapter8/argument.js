@@ -46,7 +46,8 @@ function test(a, b, c) {
     // console.log(typeof a)
     for(let i = 0;i <arguments.length; i++){
         console.log(arguments[i])
+        console.log(JSON.stringify(arguments[i]))
     }
 }
-test(10,20,30)
+test(10,20,40)
 
