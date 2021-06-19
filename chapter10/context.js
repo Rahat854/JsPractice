@@ -19,7 +19,9 @@ function d() {
     console.log('I am d function')
 }
 
-let x = 100
+let x 
+
+x = 100
 
 a()
 console.log('I am Global')
@@ -28,3 +30,6 @@ console.log('I am Global')
 //execution OF B function context
 //Execution of A function context
 //Execution of global context
+
+//Creational phase
+//Executional phase
