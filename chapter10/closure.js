@@ -11,13 +11,22 @@
 //     sayMsg()
 // }
 
-function test() {
-    let msg = 'I am learning lexical scope and closure'
-    return function() {
-        console.log(msg)
-    }
+// function test() {
+//     let msg = 'I am learning lexical scope and closure'
+//     return function() {
+//         console.log(msg)
+//     }
     
-}
+// }
  
-let sayMsg = test()
-sayMsg()
+// let sayMsg = test()
+// sayMsg()
+
+for(let i = 1; i <= 5; i++) {
+    (function (n) {
+        setTimeout(function() {
+            console.log(n)
+        }, 1000 * n )
+    }) (i)
+   
+}
