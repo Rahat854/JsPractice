@@ -1,3 +1,5 @@
+// Execution Context
+
 function a() {
     b()
     console.log('I am a function')
