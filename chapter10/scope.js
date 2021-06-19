@@ -13,3 +13,30 @@ function test() {
 }
 
 test()
+
+let a =11
+function A() {
+    let b = 12
+    function B() {
+        let c = 23
+        console.log(c)
+    }
+
+    function C() {
+        let d = 56
+        console.log(d)
+    }
+    console.log(b)
+    D()
+    B()
+    C()
+}
+
+function D(n) {
+    return n+a
+}
+
+// A -> a,b, B(), C(), D()
+// B -> a,b,c, B(), C(), D()
+// C -> a,b,d, B(), C(), D()
+// D -> a,n, A()
