@@ -1,0 +1,14 @@
+    let rect = {
+        width :10,                              |            | 
+        height: 20,                             | properties |
+
+        calculateArea: function() {                |         |
+            return this.width * this.height        |         |
+        },                                         |         |
+        calculateRange: function() {               | Methods |
+            return 2* (this.width + this.height)   |         |
+        }                                          |         |
+    }                                              |         |
+
+    let area = rect.calculateArea()
+    let range = rect.calculateRange()
