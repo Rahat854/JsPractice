@@ -1,0 +1,7 @@
+Polymorphism 
+============
+The word polymorphism is used in various contexts and describes solutions in which something
+occurs in several different forms. In computer science, it describes the concept that objects 
+of different types can be accessed through the same interface. Each type can provibe its own,
+independent implementation of this interface. It is one of the the core concepts of object
+oriented programming(OOP).
