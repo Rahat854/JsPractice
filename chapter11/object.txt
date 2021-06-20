@@ -1,0 +1,8 @@
+Object 
+------
+Everything which takes multiple properties to describe is an object
+
+Even A Number can be an object
+        450.0000
+Integer part    Floating part    Negative     Positive    String Value 
+------------    -------------    --------     --------    ------------
