@@ -1,0 +1,20 @@
+Class 
+=====
+Class is just a factory to create multiple object without code duplication.
+
+Class Rect {
+    constructor(width, height) {
+        this.width = width
+        this.height = height 
+    },
+    calculateArea() {
+        return this.width * this.height
+    },
+    calculateRange() {
+        return 2 * (this.width + this.height)
+    }
+}
+
+let rect = new Rect(10,20)
+let rect2 = new Rect(70,46)
+let rect3 = new Rect(7,6)
