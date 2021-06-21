@@ -56,32 +56,57 @@
 // let rect2 = createRect(29, 74)
 // rect2.draw()
 
-let Rectangle = function (width, height) {
-    this.width = width
-    this.height = height
+// let Rectangle = function (width, height) {
+//     this.width = width
+//     this.height = height
 
-    this.draw = function() {
-        console.log('I am a rectangle')
-        this.printProperties()
-        console.log(this)
-    }
-    this.printProperties = function() {
-        console.log('My width is ' + this.width)
-        console.log('My height is ' + this.height)
-    }
-}
+//     this.draw = function() {
+//         console.log('I am a rectangle')
+//         this.printProperties()
+//         console.log(this)
+//     }
+//     this.printProperties = function() {
+//         console.log('My width is ' + this.width)
+//         console.log('My height is ' + this.height)
+//     }
+// }
 
 // let rect3 = new Rectangle(10, 8)
 // rect3.draw()
 
-function myNew(constructor) {
-    let obj = {}
-    Object.setPrototypeOf(obj, constructor.prototype)
-    let argsArray = Array.prototype.slice.apply(arguments)
-    constructor.apply(obj, argsArray.slice(1))
+// function myNew(constructor) {
+//     let obj = {}
+//     Object.setPrototypeOf(obj, constructor.prototype)
+//     let argsArray = Array.prototype.slice.apply(arguments)
+//     constructor.apply(obj, argsArray.slice(1))
 
-    return obj
- }
+//     return obj
+//  }
 
- let rect4 = myNew(Rectangle,45, 23)
- rect4.draw()
+//  let rect4 = myNew(Rectangle,45, 23)
+//  rect4.draw()
+
+// let str = new String('str')
+// console.log('My String is ' + str)
+
+function test() {
+    console.log('something')
+}
+
+test()
+
+let Rect = Function('width', 'height', `this.width = width
+this.height = height
+
+this.draw = function() {
+    console.log('I am a rectangle')
+    this.printProperties()
+    console.log(this)
+}
+this.printProperties = function() {
+    console.log('My width is ' + this.width)
+    console.log('My height is ' + this.height)
+}`)
+let rect5 =  new Rect(4,5)
+console.log(rect5.draw())
+console.log(test.name, test.length)
