@@ -59,20 +59,20 @@
 // // let rect2 = createRect(29, 74)
 // // rect2.draw()
 
-// // let Rectangle = function (width, height) {
-// //     this.width = width
-// //     this.height = height
+// let Rectangle = function (width, height) {
+//     this.width = width
+//     this.height = height
 
-// //     this.draw = function() {
-// //         console.log('I am a rectangle')
-// //         this.printProperties()
-// //         console.log(this)
-// //     }
-// //     this.printProperties = function() {
-// //         console.log('My width is ' + this.width)
-// //         console.log('My height is ' + this.height)
-// //     }
-// // }
+//     this.draw = function() {
+//         console.log('I am a rectangle')
+//         this.printProperties()
+//         console.log(this)
+//     }
+//     this.printProperties = function() {
+//         console.log('My width is ' + this.width)
+//         console.log('My height is ' + this.height)
+//     }
+// }
 
 // // let rect3 = new Rectangle(10, 8)
 // // rect3.draw()
@@ -123,3 +123,27 @@
 // // myFunc.apply({a:40 , b : 30},[10, 5])
 // let testBind = myFunc.bind({a:7, b:3})
 // testBind(5, 7)
+
+//Pass by Value vs Pass by Reference
+//Call by Value vs Pass by Reference
+
+// let n = 10
+// function change(n) {
+//     n = n + 100
+//     console.log(n)
+// }
+// change(n)
+// console.log(n)
+
+// let obj = {
+//     a: 10,
+//     b: 20
+// }
+
+// function changMe(obj) {
+//     obj.a +=100
+//     obj.b += 100
+//     console.log(obj)
+// }
+// changMe(obj)
+// console.log(obj)
