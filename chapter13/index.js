@@ -56,3 +56,6 @@ Square.prototype = {
 
 let sqr1 = new Square(10)
 let sqr2 = new Square(5)
+for(let i in sqr1) {
+    console.log(i)
+}
