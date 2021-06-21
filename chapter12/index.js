@@ -150,16 +150,21 @@
 let Rectangle = function (width, height) {
     this.width = width
     this.height = height
+    let position = {
+        x: 56,
+        y: -100
+    }
 
     this.draw = function() {
         console.log('I am a rectangle')
-        this.printProperties()
-        console.log(this)
+        printProperties()
+        console.log('Position X = ' + position.x + ' Y = ' + position.y)
     }
-    this.printProperties = function() {
+    let printProperties = function() {
         console.log('My width is ' + this.width)
         console.log('My height is ' + this.height)
-    }
+    }.bind(this)
 }
 
 let rect7 = new Rectangle(7,9)
+rect7.draw()
