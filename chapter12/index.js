@@ -154,17 +154,35 @@ let Rectangle = function (width, height) {
         x: 56,
         y: -100
     }
+    let printProperties = function() {
+        console.log('My width is ' + this.width)
+        console.log('My height is ' + this.height)
+    }.bind(this)
+
+    // this.getPosition = function() {
+    //     return position
+    // }
 
     this.draw = function() {
         console.log('I am a rectangle')
         printProperties()
         console.log('Position X = ' + position.x + ' Y = ' + position.y)
     }
-    let printProperties = function() {
-        console.log('My width is ' + this.width)
-        console.log('My height is ' + this.height)
-    }.bind(this)
+    Object.defineProperty(this, 'position', {
+        get: function() {
+            return position
+        },
+        set: function(value) {
+            position = value
+        }
+    })
+    
 }
 
 let rect7 = new Rectangle(7,9)
 rect7.draw()
+rect7.position = {
+    x: 456,
+    y: -123
+}
+console.log(rect7.position)
