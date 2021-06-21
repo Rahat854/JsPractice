@@ -71,5 +71,17 @@ let Rectangle = function (width, height) {
     }
 }
 
-let rect3 = new Rectangle(10, 8)
-rect3.draw()
+// let rect3 = new Rectangle(10, 8)
+// rect3.draw()
+
+function myNew(constructor) {
+    let obj = {}
+    Object.setPrototypeOf(obj, constructor.prototype)
+    let argsArray = Array.prototype.slice.apply(arguments)
+    constructor.apply(obj, argsArray.slice(1))
+
+    return obj
+ }
+
+ let rect4 = myNew(Rectangle,45, 23)
+ rect4.draw()
