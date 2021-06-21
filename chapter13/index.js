@@ -37,10 +37,15 @@
 
 function Square(width) {
     this.width = width
+    this.getWidth = function() {
+        console.log('Width is ' + this.width)
+        // this.draw()
+    }
 }
 
 Square.prototype = {
     draw :    this.draw = function() {
+        this.getWidth()
         console.log('Draw')
     },
     toString: function() {
