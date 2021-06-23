@@ -39,8 +39,32 @@ import '../styles/index.scss'
 //     return a + b
 // }
 
-let add =(a,b) => a + b
-console.log(add(45, 50))
+// let add =(a,b) => a + b
+// console.log(add(45, 50))
 
-let sqr = (x) => x*x
-console.log(sqr(6))
+// let sqr = (x) => x*x
+// console.log(sqr(6))
+
+// function testMe() {
+//     console.log(this)
+// }
+// testMe.call({})
+// let obj = {
+//     name: 'Rahat kabir',
+//     print : () => {
+//         console.log(this)
+//     }
+// }
+// obj.print()
+
+let obj = {
+    name: 'rahat kabir',
+    print: function() {
+        setTimeout(() => {
+            console.log(this)
+            console.log(`Hello, ${this.name}`)
+        },1000)
+       
+    }
+}
+obj.print()
