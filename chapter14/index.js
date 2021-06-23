@@ -7,11 +7,9 @@ function Shape(color) {
     this.color = color
 }
 
-Shape.prototype.common = {
-    common : function() {
+Shape.prototype.common = function() {
         console.log('I am a common Method')
     }
-}
 
 function Square(width,color) {
     Shape.call(this, color)
@@ -39,3 +37,10 @@ function Circle(radius, color) {
 }
 
 extend(Shape, Circle)
+
+Circle.prototype.common = function() {
+    Shape.prototype.common.call(this)
+    console.log('I am calling From Circle and I have Overridden')
+}
+
+let c = new Circle(4,'red')
