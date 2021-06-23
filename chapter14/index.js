@@ -19,10 +19,10 @@ extend(Shape, Square)
 Square.prototype.draw = function() {
         console.log('Drawing')
     }
-
-
-
-
+Square.prototype.common = function() {
+        console.log('I am calling From Square and I have Overridden')
+    }
+    
 // let shape = new Shape()
 var sqr = new Square(45, 'Green')
 
@@ -39,8 +39,16 @@ function Circle(radius, color) {
 extend(Shape, Circle)
 
 Circle.prototype.common = function() {
-    Shape.prototype.common.call(this)
+    // Shape.prototype.common.call(this)
     console.log('I am calling From Circle and I have Overridden')
 }
 
 let c = new Circle(4,'red')
+
+let s = new Shape('Purple')
+
+let shapes = [s, c, sqr]
+
+for(let i of shapes) {
+    i.common()
+}
