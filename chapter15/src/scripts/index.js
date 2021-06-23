@@ -57,14 +57,24 @@ import '../styles/index.scss'
 // }
 // obj.print()
 
-let obj = {
-    name: 'rahat kabir',
-    print: function() {
-        setTimeout(() => {
-            console.log(this)
-            console.log(`Hello, ${this.name}`)
-        },1000)
+// let obj = {
+//     name: 'rahat kabir',
+//     print: function() {
+//         setTimeout(() => {
+//             console.log(this)
+//             console.log(`Hello, ${this.name}`)
+//         },1000)
        
-    }
+//     }
+// }
+// obj.print()
+
+// function sqr(n = 1) {
+//     return n*n
+// }
+// console.log(sqr())
+
+function greet(msg = 'Hello', name = 'Rahat Kabir Dhrubo') {
+    console.log(`${msg}! ${name}`)
 }
-obj.print()
+greet()
