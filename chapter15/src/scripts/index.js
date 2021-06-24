@@ -110,8 +110,21 @@ import '../styles/index.scss'
 // let {Name, email, adress: {city, country}} = person
 // console.log(Name , email, city, country)
 
-let arr = [1,2,3,4,5]
+// let arr = [1,2,3,4,5]
 
-let [first, second, , ,last] = arr
-console.log(first, second, last)
+// let [first, second, , ,last] = arr
+// console.log(first, second, last)
 
+let obj = {
+    a: 10,
+    b: 20
+}
+
+console.log(Object.entries(obj))
+
+let objArr = [
+    ['a', 10],
+    ['b', 20]
+]
+
+console.log(Object.fromEntries(objArr))
