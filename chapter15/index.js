@@ -1,4 +1,4 @@
-import '../styles/index.scss'
+
 // let s = `Rahat
 // kabir
 //         dhrubo`
