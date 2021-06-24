@@ -129,16 +129,38 @@
 
 // console.log(Object.fromEntries(objArr))
 
-let s1 = Symbol()
-let s2 = Symbol('test symbol')
+// let s1 = Symbol()
+// let s2 = Symbol('test symbol')
 
-console.log(s1)
-console.log(s2)
+// console.log(s1)
+// console.log(s2)
 
-console.log(s1 === s2)
+// console.log(s1 === s2)
 
-let toss = {
-    HEAD: Symbol('HEAD'),
-    TAIL: Symbol('TAIL')
-}
+// let toss = {
+//     HEAD: Symbol('HEAD'),
+//     TAIL: Symbol('TAIL')
+// }
 
+const arr = [1, 2, 3]
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i])
+// }
+
+// function createIterator(collection) {
+//     let i = 0
+//     return {
+//         next() {
+//             return {
+//                 done : i >= collection.length,
+//                 value: collection[i++]
+//             }
+//         }
+//     }
+// }
+// let iterate = createIterator(arr)
+// console.log(iterate.next())
+// console.log(iterate.next())
+// console.log(iterate.next())
+// console.log(iterate.next())
