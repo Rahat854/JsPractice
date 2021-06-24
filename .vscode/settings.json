@@ -47,5 +47,6 @@
             "bold": false,
             "italic": false
         }
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
