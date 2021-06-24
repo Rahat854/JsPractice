@@ -263,3 +263,21 @@ const arr = [1, 2, 3]
 // console.log(iterate.next())
 // console.log(iterate.next())
 // console.log(iterate.next())
+
+// let set = new Set([1, 2, 3,4]) 
+// let set = new Set([1,2,4])
+// set.add(5)
+// set.add(6)
+// set.add(1)
+// // console.log(set.has(5))
+// //     console.log(set)
+// //     console.log(set.size)
+// //     console.log(set.values())
+// let keyIterate = set.keys()
+// console.log(keyIterate.next())
+// for (let v of set) {
+//     console.log(v)
+
+// }
+
+// console.log(set.entries())
