@@ -161,17 +161,25 @@ const arr = [1, 2, 3]
 // }
 // let iterate = createIterator(arr)
 
-let iterate = arr[Symbol.iterator]()
-console.log(iterate.next())
-console.log(iterate.next())
-console.log(iterate.next())
-console.log(iterate.next())
+// let iterate = arr[Symbol.iterator]()
+// console.log(iterate.next())
+// console.log(iterate.next())
+// console.log(iterate.next())
+// console.log(iterate.next())
 
-let str = 'TEXT'
+// let str = 'TEXT'
 
-let iterateText = str[Symbol.iterator]()
-console.log(iterateText.next())
-console.log(iterateText.next())
-console.log(iterateText.next())
-console.log(iterateText.next())
-console.log(iterateText.next())
+// let iterateText = str[Symbol.iterator]()
+// console.log(iterateText.next())
+// console.log(iterateText.next())
+// console.log(iterateText.next())
+// console.log(iterateText.next())
+// console.log(iterateText.next())
+
+for(let v of arr) {
+    console.log(v)
+}
+
+for(let v of 'Rahat Kabir') {
+    console.log(v)
+}
