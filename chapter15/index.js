@@ -305,7 +305,7 @@
 // map.forEach((v,k) => {
 //     console.log(v,k)
 // })
-let a = {a: 10}, b = {b: 20}
+// let a = {a: 10}, b = {b: 20}
 // let set = new Set([a,b])
 // a = null
 // console.log(set)
@@ -317,10 +317,35 @@ let a = {a: 10}, b = {b: 20}
 // a = null
 // console.log(weakSet.has(a))
 
-let weakMap  =  new WeakMap([[a,45],[b,75]])
+// let weakMap  =  new WeakMap([[a,45],[b,75]])
 
-a = null
+// a = null
 
-console.log(weakMap.has(a))
-console.log(weakMap.has(b))
-console.log(weakMap.get(a))
+// console.log(weakMap.has(a))
+// console.log(weakMap.has(b))
+// console.log(weakMap.get(a))
+
+// function Rectangle(width, height) {
+//     this.width = width
+//     this.height = height
+// }
+
+// Rectangle.prototype.draw = function() {
+//     console.log(this)
+//     console.log('drawing...')
+// }
+// let rect1 = new Rectangle(12, 15)
+
+class Rectangle {
+    constructor(width,height) {
+        this.width = width
+        this.height = height
+    }
+    draw() {
+        console.log('Drawing...')
+    }
+}
+
+let rect1 = new Rectangle(45, 23)
+console.log(rect1)
+console.log(typeof Rectangle)
