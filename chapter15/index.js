@@ -416,6 +416,13 @@ class Circle {
             console.log(this.size)
         })
     }
+    get radius() {
+        return _radius.get(this)
+    }
+    set radius(v) {
+        _radius.set(this,v)
+    }
+
     draw() {
         console.log('Drawing...')
         console.log(_radius.get(this), _name.get(this))
@@ -430,3 +437,5 @@ console.log(Object.getOwnPropertySymbols(c1))
 let key = Object.getOwnPropertySymbols(c1)[1]
 console.log(key)
 c1.draw()
+c1.radius =  120
+console.log(c1.radius)
