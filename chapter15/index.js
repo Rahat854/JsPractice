@@ -336,16 +336,36 @@
 // }
 // let rect1 = new Rectangle(12, 15)
 
-class Rectangle {
-    constructor(width,height) {
-        this.width = width
-        this.height = height
+// class Rectangle {
+//     constructor(width,height) {
+//         this.width = width
+//         this.height = height
+//     }
+//     draw() {
+//         console.log('Drawing...')
+//     }
+// }
+
+// let rect1 = new Rectangle(45, 23)
+// console.log(rect1)
+// console.log(typeof Rectangle)
+
+class Person{
+    constructor(name, email) {
+        this.name = name
+        this.email = email
     }
-    draw() {
-        console.log('Drawing...')
+    print() {
+        console.log(this.name, this.email)
+    }
+    static create(str) {
+        let person =JSON.parse(str)
+        return new Person(person.name, person.email)
     }
 }
 
-let rect1 = new Rectangle(45, 23)
-console.log(rect1)
-console.log(typeof Rectangle)
+let str = '{"name" : "Rahat Kabir", "email" : "rahatkabir20@gmail.com"}'
+let p1 = Person.create(str)
+console.log(p1)
+console.log(p1 instanceof Person)
+p1.print()
