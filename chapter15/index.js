@@ -313,6 +313,14 @@ let a = {a: 10}, b = {b: 20}
 // console.log(arr[0])
 
 
-let weakSet = new WeakSet([a,b])
+// let weakSet = new WeakSet([a,b])
+// a = null
+// console.log(weakSet.has(a))
+
+let weakMap  =  new WeakMap([[a,45],[b,75]])
+
 a = null
-console.log(weakSet.has(a))
+
+console.log(weakMap.has(a))
+console.log(weakMap.has(b))
+console.log(weakMap.get(a))
