@@ -350,38 +350,57 @@
 // console.log(rect1)
 // console.log(typeof Rectangle)
 
-class Person{
-    constructor(name, email) {
-        this.name = name
-        this.email = email
-    }
-    print() {
-        console.log(this.name, this.email)
-    }
+// class Person{
+//     constructor(name, email) {
+//         this.name = name
+//         this.email = email
+//     }
+//     print() {
+//         console.log(this.name, this.email)
+//     }
 
-    test() {
-        console.log(this)
+//     test() {
+//         console.log(this)
+//     }
+//     static create(str) {
+//         let person =JSON.parse(str)
+//         return new Person(person.name, person.email)
+//     }
+// }
+
+// let str = '{"name" : "Rahat Kabir", "email" : "rahatkabir20@gmail.com"}'
+// let p1 = Person.create(str)
+// console.log(p1)
+// console.log(p1 instanceof Person)
+// p1.print()
+
+// function Shape() {
+//     this.draw = function() {
+//         console.log(this)
+//     }
+// }
+// // let s1 =  new Shape()
+// // let anotherDraw = s1.draw
+// // anotherDraw()
+
+// let test = p1.test
+// test()
+
+const _radius = Symbol()
+const _name = Symbol()
+class Circle {
+    constructor(radius, name) {
+        this[_radius] = radius
+        this[_name] = name
     }
-    static create(str) {
-        let person =JSON.parse(str)
-        return new Person(person.name, person.email)
+    draw() {
+        console.log('Drawing...')
     }
 }
+let c1 = new Circle(2)
+console.log(c1)
 
-let str = '{"name" : "Rahat Kabir", "email" : "rahatkabir20@gmail.com"}'
-let p1 = Person.create(str)
-console.log(p1)
-console.log(p1 instanceof Person)
-p1.print()
-
-function Shape() {
-    this.draw = function() {
-        console.log(this)
-    }
-}
-// let s1 =  new Shape()
-// let anotherDraw = s1.draw
-// anotherDraw()
-
-let test = p1.test
-test()
+console.log(Object.getOwnPropertyNames(c1))
+console.log(Object.getOwnPropertySymbols(c1))
+let key = Object.getOwnPropertySymbols(c1)[1]
+console.log(key)
