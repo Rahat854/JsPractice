@@ -440,28 +440,31 @@
 // c1.radius =  120
 // console.log(c1.radius)
 
-class Shape {
-    constructor(color) {
-        this.color = color
-    }
-    draw() {
-        console.log('Drawing...')
-    }
-}
+// class Shape {
+//     constructor(color) {
+//         this.color = color
+//     }
+//     draw() {
+//         console.log('Drawing...')
+//     }
+// }
 
-class Rectangle extends Shape{
-    constructor (color,width, height) {
-        super(color)
-        this.width = width
-        this.height =  height
-    }
-    draw() {
-        console.log('Drawing a rectangle')
-    }
-    calculate() {
-        return this.width * this.height
-    }
-} 
+// class Rectangle extends Shape{
+//     constructor (color,width, height) {
+//         super(color)
+//         this.width = width
+//         this.height =  height
+//     }
+//     draw() {
+//         console.log('Drawing a rectangle')
+//     }
+//     calculate() {
+//         return this.width * this.height
+//     }
+// } 
+
+import rectangle from './Rectangle'
+
 let r = new Rectangle('purple',4, 5)
 console.log(r)
 r.draw()
