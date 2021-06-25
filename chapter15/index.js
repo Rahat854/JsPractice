@@ -386,21 +386,47 @@
 // let test = p1.test
 // test()
 
-const _radius = Symbol()
-const _name = Symbol()
+// const _radius = Symbol()
+// const _name = Symbol()
+// class Circle {
+//     constructor(radius, name) {
+//         this[_radius] = radius
+//         this[_name] = name
+//     }
+//     draw() {
+//         console.log('Drawing...')
+//     }
+// }
+// let c1 = new Circle(2)
+// console.log(c1)
+
+// console.log(Object.getOwnPropertyNames(c1))
+// console.log(Object.getOwnPropertySymbols(c1))
+// let key = Object.getOwnPropertySymbols(c1)[1]
+// console.log(key)
+const _radius = new WeakMap()
+const _name = new WeakMap()
+const _resize = new WeakMap()
 class Circle {
     constructor(radius, name) {
-        this[_radius] = radius
-        this[_name] = name
+        this.size = 100
+        _radius.set(this,radius)
+        _name.set(this, name)
+        _resize.set(this, () => {
+            console.log(this.size)
+        })
     }
     draw() {
         console.log('Drawing...')
+        console.log(_radius.get(this), _name.get(this))
+        _resize.get(this)()
     }
 }
-let c1 = new Circle(2)
+let c1 = new Circle(2, 'red')
 console.log(c1)
 
 console.log(Object.getOwnPropertyNames(c1))
 console.log(Object.getOwnPropertySymbols(c1))
 let key = Object.getOwnPropertySymbols(c1)[1]
 console.log(key)
+c1.draw()
