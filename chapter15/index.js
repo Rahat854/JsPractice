@@ -142,7 +142,7 @@
 //     TAIL: Symbol('TAIL')
 // }
 
-const arr = [1, 2, 3]
+// const arr = [1, 2, 3]
 
 // for (let i = 0; i < arr.length; i++) {
 //     console.log(arr[i])
@@ -281,3 +281,38 @@ const arr = [1, 2, 3]
 // }
 
 // console.log(set.entries())
+
+// let map = new Map([
+//     ['a',10],
+//     ['b', 20],
+//     ['c', 30]
+// ])
+// map.set('d', 40)
+
+// map.delete('c')
+// // map.clear()
+// console.log(map)
+// console.log(map.size)
+// console.log(map.get('b'))
+// console.log(map.keys())
+// console.log(map.values())
+// console.log(map.entries())
+
+// for (let [k, v] of map) {
+//     console.log(v,k)
+// }
+
+// map.forEach((v,k) => {
+//     console.log(v,k)
+// })
+let a = {a: 10}, b = {b: 20}
+// let set = new Set([a,b])
+// a = null
+// console.log(set)
+// let arr = [... set]
+// console.log(arr[0])
+
+
+let weakSet = new WeakSet([a,b])
+a = null
+console.log(weakSet.has(a))
