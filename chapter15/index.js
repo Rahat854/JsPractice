@@ -463,8 +463,19 @@
 //     }
 // } 
 
-import rectangle from './Rectangle'
+import rectangle from './Rectangle.js'
 
-let r = new Rectangle('purple',4, 5)
+let r = new rectangle('purple',4, 5)
 console.log(r)
 r.draw()
+
+// import * as func from './func.js'
+
+// console.log(func.add(45, 10))
+
+// console.log(func.times(45, 10))
+
+import { add, div } from './func.js'
+
+console.log(add(45,28))
+console.log(div(45,28))

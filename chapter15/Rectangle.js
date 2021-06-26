@@ -1,6 +1,6 @@
 
-import shape from './Shape'
-class Rectangle extends Shape{
+import shape from './Shape.js'
+class Rectangle extends shape{
     constructor (color,width, height) {
         super(color)
         this.width = width
