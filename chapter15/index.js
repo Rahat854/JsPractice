@@ -469,11 +469,11 @@ let r = new rectangle('purple',4, 5)
 console.log(r)
 r.draw()
 
-// import * as func from './func.js'
+import * as func from './func.js'
 
-// console.log(func.add(45, 10))
+console.log(func.add(45, 10))
 
-// console.log(func.times(45, 10))
+console.log(func.times(45, 10))
 
 import { add, div } from './func.js'
 
