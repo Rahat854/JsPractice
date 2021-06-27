@@ -32,8 +32,8 @@ try {
     throw new Error('I am your Error')
     console.log('I am line 2')
     console.log('I am line 3')
-} catch(e) {
-    console.log(e.message)
+} catch {
+    console.log('This is a custom error message')
 } finally {
     console.log('I am finally block')
 }
