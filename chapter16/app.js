@@ -26,14 +26,22 @@
 
 // let words = makeWords(86)
 // console.log(words)
+class customError  extends Error {
+    constructor(msg) {
+        super(msg)
 
+        if(Error.captureStackTrace)
+            Error.captureStackTrace(this, customError)
+    }
+
+}
 try {
     console.log('I am line 1')
-    throw new Error('I am your Error')
+    throw new customError('I am your Error')
     console.log('I am line 2')
     console.log('I am line 3')
-} catch {
-    console.log('This is a custom error message')
+} catch(e) {
+    console.dir(e)
 } finally {
     console.log('I am finally block')
 }
