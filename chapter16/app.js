@@ -14,18 +14,24 @@
 // let result = changToInt('86')
 // console.log(result)
 
-function makeWords(text) {
-    try {
-        let str = text.trim()
-        let words = str.split(' ')
-        return words
-    } catch(e) {
-        console.log('Please provide a valid text')
-    }
+// function makeWords(text) {
+//     try {
+//         let str = text.trim()
+//         let words = str.split(' ')
+//         return words
+//     } catch(e) {
+//         console.log('Please provide a valid text')
+//     }
+// }
 
+// let words = makeWords(86)
+// console.log(words)
 
-    // return words
+try {
+    console.log('I am line 1')
+    throw new Error('I am your Error')
+    console.log('I am line 2')
+    console.log('I am line 3')
+} catch(e) {
+    console.log(e.message)
 }
-
-let words = makeWords(86)
-console.log(words)
