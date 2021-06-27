@@ -34,4 +34,6 @@ try {
     console.log('I am line 3')
 } catch(e) {
     console.log(e.message)
+} finally {
+    console.log('I am finally block')
 }
