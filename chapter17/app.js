@@ -5,4 +5,5 @@
 don't have to finish executing the current thing in order to 
 move on to next one */
 
-import './lessons/lesson2.js'
+// import './lessons/lesson2.js'
+import './lessons/lesson3.js'
