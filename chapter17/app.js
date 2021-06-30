@@ -12,4 +12,5 @@ move on to next one */
 // import './lessons/lesson9.js'
 // import './lessons/lesson10.js'
 // import './lessons/lesson11.js'
-import './lessons/lesson12.js'
+// import './lessons/lesson12.js'
+import './lessons/lesson13.js'
