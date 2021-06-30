@@ -18,19 +18,23 @@ let asyncIterable = {
     }
 }
 
-let iterate = asyncIterable[Symbol.asyncIterator]()
-console.log(iterate.next());
+let iterate = asyncIterable[Symbol.asyncIterator]();
 
+// (async function () {
+//     console.log(await iterate.next())
+//     console.log(await iterate.next())
+//     console.log(await iterate.next())
+//     console.log(await iterate.next())
+//     console.log(await iterate.next())
+//     console.log(await iterate.next())
+//     console.log(await iterate.next())
+//     console.log(await iterate.next())
+//     console.log(await iterate.next())
+//     console.log(await iterate.next())
+
+// })()
 (async function () {
-    console.log(await iterate.next())
-    console.log(await iterate.next())
-    console.log(await iterate.next())
-    console.log(await iterate.next())
-    console.log(await iterate.next())
-    console.log(await iterate.next())
-    console.log(await iterate.next())
-    console.log(await iterate.next())
-    console.log(await iterate.next())
-    console.log(await iterate.next())
-
+   for await (let v of asyncIterable) {
+       console.log(v)
+   } 
 })()
