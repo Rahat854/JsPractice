@@ -7,4 +7,5 @@ move on to next one */
 
 // import './lessons/lesson2.js'
 // import './lessons/lesson3.js'
-import './lessons/lesson4.js'
+// import './lessons/lesson4.js'
+import './lessons/lesson8.js'
