@@ -5,11 +5,11 @@
 don't have to finish executing the current thing in order to 
 move on to next one */
 
-import './lessons/lesson7.js'
+// import './lessons/lesson7.js'
 // import './lessons/lesson6.js'
 // import './lessons/lesson4.js'
 // import './lessons/lesson8.js'
-// import './lessons/lesson9.js'
+import './lessons/lesson9.js'
 // import './lessons/lesson10.js'
 // import './lessons/lesson11.js'
 // import './lessons/lesson12.js'
