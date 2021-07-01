@@ -18,8 +18,9 @@ let div = createElement('div')
 append(div,[p1,p2])
 console.log(div)
 
-let container = document.getElementById('cont')
-container.appendChild(div)
+list.insertAdjacentElement('afterend',div)
+// let container = document.getElementById('cont')
+// container.appendChild(div)
 
 function append(parent,children) {
     children.forEach(child => parent.appendChild(child))
