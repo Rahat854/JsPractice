@@ -12,8 +12,8 @@ append(div,[p1,p2])
 console.log(div)
 
 list.insertAdjacentElement('afterend',div)
-// let container = document.getElementById('cont')
-// container.appendChild(div)
+let container = document.getElementById('cont')
+container.appendChild(div)
 
 function append(parent,children) {
     children.forEach(child => parent.appendChild(child))
@@ -25,3 +25,14 @@ function createElement(tagName, className, innerHTML) {
     tag.className = className || ''
     return tag
 }
+
+//Remove Element and update
+let firstChild = list.firstElementChild
+
+setTimeout(() => {
+    firstChild.innerHTML = firstChild.innerHTML + ' (Modified)'
+    firstChild.classList.add('text-success')
+}, 5000);
+setTimeout(() => {
+    list.lastChild.remove()
+}, 3000);
