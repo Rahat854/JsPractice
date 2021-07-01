@@ -41,3 +41,13 @@ function listItemGenerator(item) {
 
     return li
 }
+
+//canvas
+//SVG
+//Drag and Drop
+// Transitions
+// Location
+//Audio, video
+//Speech Recognition
+// web socket
+// Local storage, Cookies and Browser database
