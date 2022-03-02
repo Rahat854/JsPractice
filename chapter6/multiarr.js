@@ -12,3 +12,6 @@ for(let i =0; i<arr.length;i++){
         console.log('Element ' + i + ' : ' + arr[i][j])
     }
 }
+
+console.log(arr.flat(Infinity));
+// convert all depth of array in a single array

@@ -29,7 +29,7 @@
 
 // let a = 'I am '
 // let b = 'Rahat Kabir'
-// let c = a.concat(b)
+// let c = a.concat(b) 
 // // let d = c.substr(5)
 // // console.log(d)
 // console.log(c.charAt(0))
