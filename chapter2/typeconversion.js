@@ -2,9 +2,9 @@
 // var n = 10
 // console.log(Number.parseInt(str))
 // console.log(n.toString())
-// console.log(Number(Infinity))
-// console.log(String(Boolean))
-// console.log(Boolean(Infinity))
+// console.log(Number(Infinity))// returns Infinity
+// console.log(String(Boolean)) // returns function Boolean {[native code]}
+// console.log(Boolean(Infinity)) // returns true
 
 //Falsy values
 //0 
