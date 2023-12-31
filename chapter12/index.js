@@ -1,63 +1,47 @@
-//  // let rect = {
-//  //     width : 100,
-//  //     height : 50,
+ let rect = {
+     width : 500,
+     height : 400,
+     draw: function() {
+         console.log('I am a rectangle')
+         this.printProperties()
+     },
+     printProperties : function() {
+         console.log('My width is ' + this.width)
+         console.log('My height is ' + this.height)
+
+     }
+ }
+ rect.draw()
+// function drawBox() {
+//     let width = document.getElementById('width').value
+//     let height = document.getElementById('height').value
+//     let color = document.getElementById('color').value
+//     let canvas = document.getElementById('demo').style
+//     canvas.width = width + 'px'
+//     canvas.height = height + 'px'
+//     canvas.backgroundColor = color
+// }
 
 
-
- 
-//  //     draw: function() {
-//  //         console.log('I am a rectangle')
-//  //         this.printProperties()
-//  //         console.log(this)
-//  //     },
-//  //     printProperties : function() {
-//  //         console.log('My width is ' + this.width)
-//  //         console.log('My height is ' + this.height)
-//  //     }
-//  // }
- 
-//  // rect.draw()
- 
-//  // // rect.height = 100
- 
-//  // // rect.draw()
- 
-//  // function myFunc() {
-//  //     console.log(this)
-//  //     rect.printProperties()
-//  // }
- 
-//  //  new myFunc()
- 
-//  //  let another = {
-//  //      width : 47,
-//  //      height : 56,
-//  //      print : rect.printProperties
-//  //  }
-//  //  console.log(another.print)
-//  //  another.print()
-
-
-// // let createRect = function(width, height) {
-// //     return {
-// //         width : width,
-// //         height : height,
+let createRect = function(width, height) {
+    return {
+        width : width, // 10
+        height : height, // 8
     
-// //         draw: function() {
-// //             console.log('I am a rectangle')
-// //             this.printProperties()
-// //             console.log(this)
-// //         },
-// //         printProperties : function() {
-// //             console.log('My width is ' + this.width)
-// //             console.log('My height is ' + this.height)
-// //         }
-// //     }
-// // }
-// // let rect1 = createRect(10,8)
-// // rect1.draw()
-// // let rect2 = createRect(29, 74)
-// // rect2.draw()
+        draw: function() {
+            console.log('I am a rectangle')
+            this.printProperties()
+        },
+        printProperties : function() {
+            console.log('My width is ' + this.width)
+            console.log('My height is ' + this.height)
+        }
+    }
+}
+let rect1 = createRect(10,8)
+rect1.draw()
+let rect2 = createRect(29, 74)
+rect2.draw()
 
 // let Rectangle = function (width, height) {
 //     this.width = width
@@ -147,42 +131,42 @@
 // }
 // changMe(obj)
 // console.log(obj)
-let Rectangle = function (width, height) {
-    this.width = width
-    this.height = height
-    let position = {
-        x: 56,
-        y: -100
-    }
-    let printProperties = function() {
-        console.log('My width is ' + this.width)
-        console.log('My height is ' + this.height)
-    }.bind(this)
-
-    // this.getPosition = function() {
-    //     return position
-    // }
-
-    this.draw = function() {
-        console.log('I am a rectangle')
-        printProperties()
-        console.log('Position X = ' + position.x + ' Y = ' + position.y)
-    }
-    Object.defineProperty(this, 'position', {
-        get: function() {
-            return position
-        },
-        set: function(value) {
-            position = value
-        }
-    })
-    
-}
-
-let rect7 = new Rectangle(7,9)
-rect7.draw()
-rect7.position = {
-    x: 456,
-    y: -123
-}
-console.log(rect7.position)
+// let Rectangle = function (width, height) {
+//     this.width = width
+//     this.height = height
+//     let position = {
+//         x: 56,
+//         y: -100
+//     }
+//     let printProperties = function() {
+//         console.log('My width is ' + this.width)
+//         console.log('My height is ' + this.height)
+//     }.bind(this)
+//
+//     // this.getPosition = function() {
+//     //     return position
+//     // }
+//
+//     this.draw = function() {
+//         console.log('I am a rectangle')
+//         printProperties()
+//         console.log('Position X = ' + position.x + ' Y = ' + position.y)
+//     }
+//     Object.defineProperty(this, 'position', {
+//         get: function() {
+//             return position
+//         },
+//         set: function(value) {
+//             position = value
+//         }
+//     })
+//
+// }
+//
+// let rect7 = new Rectangle(7,9)
+// rect7.draw()
+// rect7.position = {
+//     x: 456,
+//     y: -123
+// }
+// console.log(rect7.position)

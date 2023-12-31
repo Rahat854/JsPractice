@@ -12,5 +12,5 @@ function asyncMap(arr, cb) {
     })
 }
 
-let qbArr = asyncMap(arr, v=> console.log(v))
+let qbArr = asyncMap(arr, v => console.log(v))
 console.log(qbArr)

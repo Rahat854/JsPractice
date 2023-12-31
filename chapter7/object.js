@@ -14,7 +14,7 @@
 // console.log(point)
 
 // let obj = Object()
-// obj.a =10
+// obj.a = 10
 // console.log(obj)
 // let obj2 = new Object()
 // obj2.b = 20
@@ -25,7 +25,7 @@ let point = {
     z: 15
 }
 // //dot notation
-// console.log(point.x)
+console.log(point.x)
 // console.log(point.x)
 // console.log(point.x + point.z)
 // //array notation

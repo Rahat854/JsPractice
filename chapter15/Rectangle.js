@@ -1,6 +1,6 @@
-
-import shape from './Shape.js'
-class Rectangle extends shape{
+import Shape from './Shape.js'
+import {times} from './func.js'
+class Rectangle extends Shape{
     constructor (color,width, height) {
         super(color)
         this.width = width
@@ -10,8 +10,7 @@ class Rectangle extends shape{
         console.log('Drawing a rectangle')
     }
     calculate() {
-        return this.width * this.height
+        return times(this.width, this.height)
     }
-} 
-
+}
 export default Rectangle

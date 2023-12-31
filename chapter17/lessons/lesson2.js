@@ -10,6 +10,6 @@ setTimeout(() => {
     console.log('I am line 5')
 },1000)
 
-// setTimeout(() => {
-//     console.log('I have done')
-// }, 5000)
+setTimeout(() => {
+    console.log('I have done')
+}, 5000)

@@ -5,10 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twinkle Cats - Javascript All you Need to Know</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Welcome to Our Course</h1>
-
-    <script src = "./index.js"></script>
+    <form id="rectangleForm">
+        <label for="width">
+            Enter width:
+        </label>
+        <input id="width" type="number" placeholder="Enter Width">
+        <label for="height">
+            Enter height:
+        </label>
+        <input id="height" type="number" placeholder="Enter Height">
+        <label for="color">
+            Enter color:
+        </label>
+        <input id="color" type="text" placeholder="Enter Color">
+        <button id="btn" type="button" onclick="drawBox()">Draw</button>
+    </form>
+    <div id="demo"></div>
 </body>
 </html>
+<script src = "index.js"></script>

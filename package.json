@@ -1,0 +1,10 @@
+{
+  "name": "JsPractice",
+  "version": "1.0.0",
+    "description": "Practice JavaScript",
+    "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}

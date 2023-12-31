@@ -1,57 +1,48 @@
-// function extend(Parent,child) {
-//     child.prototype = Object.create(Shape.prototype)
-//     child.prototype.constructor =  child
-// }
+const CryptoJS = require("crypto-js/core");
+CryptoJS.AES = require("crypto-js/aes");
+function Shape(color) {
+    this.color = color;
+}
 
-// function Shape(color) {
-//     this.color = color
-// }
+Shape.prototype.common = function() {
+    console.log('I am a common Method')
+}
+Shape.prototype.text = 'Shape Constructor'
+let a = new Shape('Green')
+console.log(Shape.prototype)
+a.common()
+console.log(a.text)
+let b = new Shape('Red')
+b.common()
+console.log(b.text)
+function Square(width,color) {
+    Shape.call(this, color)
+    this.width = width
+}
 
-// Shape.prototype.common = function() {
-//         console.log('I am a common Method')
-//     }
-
-// function Square(width,color) {
-//     Shape.call(this, color)
-//     this.width = width
-// }
-// extend(Shape, Square)
-// Square.prototype.draw = function() {
-//         console.log('Drawing')
-//     }
-// Square.prototype.common = function() {
-//         console.log('I am calling From Square and I have Overridden')
-//     }
-    
-// // let shape = new Shape()
-// var sqr = new Square(45, 'Green')
-
-// //shape ->Shape -> Object
-// //sqr -> Square -> Object
-
-// //sqr -> Square -> Shape -> Object
-
-// function Circle(radius, color) {
-//     Shape.call(this, color)
-//     this.radius = radius
-// }
-
-// extend(Shape, Circle)
-
-// Circle.prototype.common = function() {
-//     // Shape.prototype.common.call(this)
-//     console.log('I am calling From Circle and I have Overridden')
-// }
-
-// let c = new Circle(4,'red')
-
-// let s = new Shape('Purple')
-
-// let shapes = [s, c, sqr]
-
-// for(let i of shapes) {
-//     i.common()
-// }
+let d = new Square(12, 'Purple')
+console.log(d)
+function extend(Parent,child) { // Parent = Shape, child = Square
+    child.prototype = Object.create(Parent.prototype)
+}
+extend(Shape, Square)
+Square.prototype.common = function() {
+    console.log('I am calling From Square and I have Overridden')
+}
+function Circle(radius, color) {
+    Shape.call(this, color)
+    this.radius = radius
+}
+extend(Shape, Circle)
+Circle.prototype.common = function() {
+    console.log('I am calling From Circle and I have Overridden')
+}
+let c = new Circle(4,'red')
+let s = new Shape('Purple')
+let sqr = new Square(45, 'Green');
+c.common();
+s.common();
+sqr.common();
 
 function mixin(target, ...sources) {
     Object.assign(target,...sources)
@@ -77,12 +68,12 @@ let canSwim = {
 
 // let person = Object.assign({}, canWalk, canEat)
 // person.name = 'Rahat kabir Dhrubo'
-function person(name) {
+function Person(name) {
     this.name = name
 }
-mixin(person.prototype, canWalk, canEat)
-let Person = new person('Rahat kabir Dhrubo')
-console.log(Person)
+mixin(Person.prototype, canWalk, canEat)
+let person = new Person('Rahat kabir Dhrubo')
+console.log(person)
 
 function Goldfish(name) {
     this.name = name
@@ -90,3 +81,4 @@ function Goldfish(name) {
 mixin(Goldfish.prototype,canEat,canSwim)
 let fish = new Goldfish('star fish')
 console.log(fish)
+
